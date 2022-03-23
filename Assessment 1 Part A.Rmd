@@ -1,0 +1,26 @@
+---
+title: "Assesment1_test"
+author: "Bhavishya Gupta (s4663825)"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Rmarkdown editing
+
+**R Markdown documents provide quick, reproducible reporting from R.**
+*You write your document in markdown and embed executable R code chunks with the knitr syntax. You can update your document at any time by re-knitting the code chunks.*
+
+```{r}
+fastfood<-read.csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+```
+
+```{r}
+data <- fastfood[1:10,1:5 ]
+knitr::kable(data, 
+ caption = "Fastfood")
+```
+
